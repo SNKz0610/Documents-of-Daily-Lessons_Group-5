@@ -1,0 +1,57 @@
+GIT LESSON 2: GROUP WORKING
+
+*Bài trước
+- 3 trạng thái của file trong git
++untracked file: chưa đặt dưới sự quản lý theo dõi của git local repo
++ tracked file: là những file đã được git add 1 lần r
+có 3 loại 
+. modifed
+.staged
+.unmodified: k có thay đổi gì
++ remote repo: lưu ở 1 chỗ khác k phải local repo
+
+- .git: là những file quản lý project của chúng ta, theo dõi commit...
+- git commit convention
+ 
+*Nội dung chính
+I> Đặt vấn đề
+- Đối với công việc nhóm, sử dụng kiến thức buổi trước, ta clone về và push lên sau khi hoàn thành công việc của mình
+- Tuy nhiên, có 2 vấn đề:
++ Thời gian bỏ ra lâu vì nó là quy trình xử lý lần lượt: A xong r mới đến B
++ Kết quả cuối cùng không được đảm bảo được sự chính xác vì không có người kiểm
+duyệt
+- Giải pháp
++ Tận dụng cách làm việc //, tạo không gian làm việc riêng cho từng người thông qua
+git branch và git checkout
++ Gộp kết quả công việc và hỗ trợ phân quyền cho các thành viên: pull request
++ Đồng bộ công việc giữa các thành viên: git pull, git push, git fetch
+
+1, Git branch
+- Dùng để phân nhánh và branch đã phân nhánh sẽ không ảnh hưởg đến branch #
+- git branch -a: liệt kê toàn bộ branch ở local và remote repo, lưu ý là nhánh 2 nhánh master là khác nhau (1 cai là của remote 1 cái là của local)
+- git diff orignin/<tên nhánh>: so sánh sự thay đổi khác nhau ở local và remote
+
+2, Git checkout
+- git checkout [<option>] <branch>: ngoài chuyển nhánh nó còn tạo nhánh mới thông qua câu lệnh git checkout -b <new_branch>, nó đồng thời sẽ chuyển luôn từ nhánh hiện tại sang nhánh mới
+git checkout --help để xem tài liệu và mô tả
+- git switch <branch>: đảm nhiệm nhiệm vụ chuyển nhánh cụ thể
+
+4, Pull / Merge Request
+- Pull dùng cho github, Merge dùng cho GitLab
+- Nhằm để cho người leader cấp quyền cho mình
+
+5, Git fetch
+-Tương tự git pull nhưng git pull sẽ bao gồm cả fetch và merge
+- Fetch thì ta có thể xem lịch sử và merge cái ta muốn, còn pull thì lấy thẳng luôn k có xem
+
+6, Git merge
+- Kết hợp sự thay đổi của các commit kể từ lúc tách nhánh của nhánh hiện tại vào nhánh tách ra trước đó
+- câu lệnh:
+  git merge destination_branch_name
+destination_branch_name: là tên nhánh bạn muốn merge vào nhánh hiện tại
+- Khi merge nó sẽ nằm ở trong file trên file .git
+
+7, Git pull 
+git pull = git merge +git fetch 
+
+- khi merge 2 branch khác nhau với lịch sử commit khác nhau, nó sẽ hiển thị theo thứ tự thời gian.

@@ -19,3 +19,6 @@ destination_branh_name: là tên nhánh bạn muốn merge vào nhánh hiện t�
 6. Git pull 
 git pull = git fetch + merge 
 - git pull destination_branch_name 
+
+*Review from Đỗ Ngọc Anh (Trưởng nhóm):
+Bài tóm tắt của bạn khá đầy đủ, trình bày rõ ràng.

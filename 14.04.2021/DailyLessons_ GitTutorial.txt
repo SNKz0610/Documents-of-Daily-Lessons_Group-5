@@ -1,0 +1,29 @@
+- Các lợi ích của GIT:
++ Lưu lịch sử thay đổi của toàn bộ dự án
++ Có thể chia sẻ code cho bất kì ai 
++ Kiểm soát thời gian/ lượng công việc và quản lý mã nguồn (Lưu lại những thay đổi)
+
+- Git là 1 hệ thống kiểm soát mã nguồn phân tán, cho phép những người tham gia quản lý
+mã nguồn theo toàn bộ thời gian (ai thay đổi? những cái gì thay đổi? )
+
+- Git server là 1 dịch vụ lưu trữ trên đám mây cho phép ta quản lý lưu trữ GIT
+
+- Sử dụng GIT như nào
+git config --global user.email youremail@gmail.com
+git config --global user.name "your name"
+git init : địa chỉ của nơi lưu, tao respon trong moi
+git add . :luu toan bo su thay doi 
+git add <ten_file>: them file
+git commit -m "cam ket, chang han nhu I created...."
+(-m = message nhé mọi người. Commit với message trong dấu ngoặc)
+git status: kiem tra trang thai xem co su thay doi nao k
+git diff: xem lich su thay doi so voi commit cuoi
+git --help: cac chi dan cu the
+git log: lich su thay doi cac commit
+git log --oneline: thu ngan lai cac commit de tien lay ma hask (phuc hoi lai commit cu can ma nay)
+git checkout <ma hask commit muon hoi phuc> -- <ten file can khoi phuc.Neu muon khoi phuc tat ca thi dung dau ter
+git remote add origin <Link cua resposi tren git hub>
+git push origin master: day code sau khi da commit o local de day len server
+git pull origin master: pull ve toan bo su thay doi
+
+

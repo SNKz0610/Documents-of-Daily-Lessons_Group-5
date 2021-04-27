@@ -54,12 +54,8 @@ destination_branch_name: là tên nhánh bạn muốn merge vào nhánh hiện t
 7, Git pull 
 git pull = git merge +git fetch 
 
-<<<<<<< HEAD
-- khi merge 2 branch khác nhau với lịch sử commit khác nhau, nó sẽ hiển thị theo thứ tự thời gian.
 
 
 Review from Quỳnh Anh:
 - Bài bạn làm tốt, nội dung đầy đủ, chi tiết.
-=======
-- khi merge 2 branch khác nhau với lịch sử commit khác nhau, nó sẽ hiển thị theo thứ tự thời gian.
->>>>>>> 725c1ac06313ed8141250faec654540ed32cb201
+
